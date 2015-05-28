@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<system name="speedbrakes">
+
+  <channel name="Speedbrake">
+
+   <summer name="Gear Cmd Inverse">
+     <input>-gear/gear-cmd-norm</input>
+     <bias>1.0</bias>
+   </summer> 
+
+   <pure_gain name="speedbrake-cmd-vertical">
+     <input>fcs/speedbrake-cmd-norm</input>
+     <gain>fcs/gear-cmd-inverse</gain>
+   </pure_gain>
+
+   <pure_gain name="speedbrake-cmd-horizontal">
+     <input>fcs/speedbrake-cmd-norm</input>
+     <gain>1.0</gain>
+   </pure_gain>
+
+   <kinematic name="Vertical Speedbrake Control">
+     <input>fcs/speedbrake-cmd-vertical</input>
+     <traverse>
+       <setting>
+          <position> 0 </position>
+          <time>     0 </time>
+       </setting>
+       <setting>
+          <position> 1 </position>
+          <time>     1 </time>
+       </setting>
+     </traverse>
+     <output>fcs/vertical-speedbrake-pos-norm</output>
+   </kinematic>
+
+   <kinematic name="Horizontal Speedbrake Control">
+     <input>fcs/speedbrake-cmd-horizontal</input>
+     <traverse>
+       <setting>
+          <position> 0 </position>
+          <time>     0 </time>
+       </setting>
+       <setting>
+          <position> 1 </position>
+          <time>     1 </time>
+       </setting>
+     </traverse>
+     <output>fcs/horizontal-speedbrake-pos-norm</output>
+   </kinematic>
+
+
+  </channel>
+
+</system>

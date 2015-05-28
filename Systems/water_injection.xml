@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<system name="Water_Injection">
+
+  <property>systems/Water_Injection/armed</property>
+
+  <channel>
+
+     <switch name="systems/Water_Injection/switch">
+          <default value="0"/>
+          <test  logic="AND" value="1">
+                propulsion/engine[0]/n2 gt 98.0
+                systems/Water_Injection/armed == 1
+          </test>
+          <output>propulsion/engine[0]/injection_cmd</output>
+     </switch>
+
+     <switch name="systems/Water_Injection/cutoff">
+          <default value="systems/Water_Injection/armed"/>
+          <test logic="AND" value="0">
+            fcs/flap-cmd-norm lt 1
+            gear/gear-cmd-norm == 0
+          </test>
+          <output>systems/Water_Injection/armed</output>
+     </switch>
+
+  </channel>
+
+</system>
