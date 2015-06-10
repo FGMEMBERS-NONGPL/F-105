@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+
+ <filter>
+  <name>Engine Nozzle Area</name>
+  <debug>false</debug>
+  <type>gain</type>
+  <input>
+	<value>150.0</value>
+  </input>
+  <reference>
+   	<property>engines/engine[0]/n1</property>
+	<scale>1.5</scale>
+  </reference>
+  <output>
+   <property>engines/engine/nozzle-pos-norm</property>
+  </output>
+  <gain>
+   <expression>
+    <table>
+     <property>engines/engine[0]/afterburner</property>
+     <entry><ind>0</ind><dep>0.01</dep></entry>
+     <entry><ind>1</ind><dep>1.0</dep></entry>
+    </table>
+   </expression>
+  </gain>
+  <u_min>0.0</u_min>
+  <u_max>1.0</u_max>
+ </filter>
+
+</PropertyList>
+

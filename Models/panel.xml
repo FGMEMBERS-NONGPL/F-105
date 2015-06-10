@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<model>
+  <path>Aircraft/F-105/Models/cockpit.ac</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m> 0</y-m>
+   <z-m>0</z-m>
+  </offsets>
+ </model>
+
+
+  <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>100</max-m>
+    </animation>
+
+
+
+<!-- ******************** instruments *******************-->
+ 
+ <!--
+ 
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/fire-warn/fire-warn1.xml</path>
+  <offsets>
+   <x-m>-5.14</x-m>
+   <y-m> 0</y-m>
+   <z-m>1.015</z-m>
+  </offsets>
+ </model>
+ -->
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/AI/AI.xml</path>
+  <offsets>
+   <x-m>-5.0</x-m>
+   <y-m> -0.013</y-m>
+   <z-m>0.858</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/HSI/hsi.xml</path>
+  <offsets>
+    <x-m>-4.99</x-m>
+   <y-m> -0.013</y-m>
+   <z-m>0.67</z-m>
+  </offsets>
+ </model>
+ 
+ 
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/alt/alt.xml</path>
+  <offsets>
+   <x-m>-4.99</x-m>
+   <y-m>-0.155</y-m>
+   <z-m>0.825</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/alt/altimeter.xml</path>
+  <offsets>
+   <x-m>-5</x-m>
+   <y-m>-0.255</y-m>
+   <z-m>0.805</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/AI/AI2.xml</path>
+  <offsets>
+   <x-m>-4.99</x-m>
+   <y-m>-0.255</y-m>
+   <z-m>0.745</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/asi/airspeed.xml</path>
+  <offsets>
+   <x-m>-5</x-m>
+   <y-m>-0.195</y-m>
+   <z-m>0.673</z-m>
+  </offsets>
+ </model>
+ 
+  <model>
+  <path>Aircraft/F-105/Models/Instruments/asi/asi.xml</path>
+  <offsets>
+   <x-m>-4.99</x-m>
+   <y-m>0.126</y-m>
+   <z-m>0.817</z-m>
+  </offsets>
+ </model>
+ 
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/clock/chronograph.xml</path>
+  <offsets>
+  <x-m>-4.985</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>0.673</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/epr/eprL.xml</path>
+  <offsets>
+   <x-m>-4.99</x-m>
+   <y-m> 0.096</y-m>
+   <z-m>0.665</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/n2/n2.xml</path>
+  <offsets>
+    <x-m>-4.995</x-m>
+   <y-m> 0.318</y-m>
+   <z-m>0.725</z-m>
+  </offsets>
+ </model>
+ <!--
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/oilpressure/oilpressureL.xml</path>
+  <offsets>
+   <x-m>-5.12</x-m>
+   <y-m>0.185</y-m>
+   <z-m>0.84</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/FuelFlow/ff.xml</path>
+  <offsets>
+   <x-m>-5.12</x-m>
+   <y-m> 0.14</y-m>
+   <z-m>0.796</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/EGT/EGT.xml</path>
+  <offsets>
+   <x-m>-5.12</x-m>
+   <y-m> 0.14</y-m>
+   <z-m>0.84</z-m>
+  </offsets>
+ </model>
+
+ -->
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/AOA/aoa.xml</path>
+  <offsets>
+  <x-m>-5</x-m>
+   <y-m> 0.165</y-m>
+   <z-m>0.665</z-m>
+  </offsets>
+ </model>
+
+ 
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/IVSI/IVSI.xml</path>
+  <offsets>
+    <x-m>-5.08</x-m>
+   <y-m>-0.14</y-m>
+   <z-m> 1.3</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/Flaps/flaps.xml</path>
+  <offsets>
+  <x-m>-5</x-m>
+   <y-m>-0.323</y-m>
+   <z-m>0.74</z-m>
+   <heading-deg>0</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/Gear/gear.xml</path>
+  <offsets>
+   <x-m>-4.99</x-m>
+   <y-m>-0.39</y-m>
+   <z-m> 0.845</z-m>
+   <heading-deg>25</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/PanelLights/lights.xml</path>
+  <offsets>
+   <x-m>-5.005</x-m>
+   <y-m>-0.262</y-m>
+   <z-m>0.623</z-m>
+   <heading-deg>0</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/Fuel/fuel.xml</path>
+  <offsets>
+    <x-m>-5</x-m>
+   <y-m>-0.132</y-m>
+   <z-m>0.673</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Fuel/fuel-dump-switch.xml</path>
+  <offsets>
+  <x-m>-5</x-m>
+   <y-m>-0.132</y-m>
+   <z-m>0.623</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/Gunsight/gunsight.xml</path>
+  <offsets>
+   <x-m>-4.99</x-m>
+   <y-m>0</y-m>
+   <z-m>1.01</z-m>
+  </offsets>
+ </model>
+<!--
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/GMeter/gmeter.xml</path>
+  <offsets>
+   <x-m>-5.13</x-m>
+   <y-m>-0.169</y-m>
+   <z-m>0.92</z-m>
+  </offsets>
+ </model>
+-->
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/radar/radar.xml</path>
+  <offsets>
+   <x-m>-4.97</x-m>
+   <y-m> -0.01</y-m>
+   <z-m> 0.52</z-m>
+   <pitch-deg>-32.0</pitch-deg>
+  </offsets>
+ </model>
+<!--
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/SAI/sai.xml</path>
+  <offsets>
+   <x-m>-5.09</x-m>
+   <y-m>-0.16</y-m>
+   <z-m> 0.89</z-m>
+  </offsets>
+ </model>
+-->
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/MagCompass/comp.xml</path>
+  <offsets>
+   <x-m>-5.03</x-m>
+   <y-m>-0.1</y-m>
+   <z-m>1.05</z-m>
+   <heading-deg>0.0</heading-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/F-105/Models/Instruments/ALR46/alr46.xml</path>
+  <offsets>
+   <x-m>-5.02</x-m>
+   <y-m> 0.136</y-m>
+   <z-m> 1.062</z-m>
+  </offsets>
+ </model>
+</PropertyList>
+
+

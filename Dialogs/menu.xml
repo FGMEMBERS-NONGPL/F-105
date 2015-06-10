@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="100">
+      <label>F-105</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+<item n="1">
+        <label>Blue smoke</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var p = "sim/multiplay/generic/int[7]";
+            setprop(p, 0);
+          </script>
+        </binding>
+      </item>
+      <item n="2">
+        <label>White smoke</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var p = "sim/multiplay/generic/int[7]";
+            setprop(p, 1);
+          </script>
+        </binding>
+      </item>
+      <item n="3">
+        <label>Red smoke</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var p = "sim/multiplay/generic/int[7]";
+            setprop(p, 2);
+          </script>
+        </binding>
+      </item>  
+
+ <item n="4">
+        <label>Reload Gun</label>
+        <binding>
+          <command>nasal</command>
+          <script>guns.reload_Cannon()</script>
+        </binding>
+      </item>
+      <item n="5">
+        <label>No load</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.clean()</script>
+        </binding>
+      </item>
+      <item n="6">
+        <label>Ferry</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.ferry()</script>
+        </binding>
+      </item>
+      <item n="7">
+        <label>Air to Air Short Distance</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.AirToAir()</script>
+        </binding>
+      </item>
+      <item n="8">
+        <label>Air to Air, medium range</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.AirToAir1()</script>
+        </binding>
+      </item>
+
+	   <item n="9">
+        <label>Air to Air,extended loiter</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.AirToAir2()</script>
+        </binding>
+      </item>
+	  
+	   <item n="10">
+        <label>Heavy bomb load, short range</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.heavybomb()</script>
+        </binding>
+      </item>
+	  
+	   <item n="11">
+        <label>Medium bomb load, medium range</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.mediumbomb()</script>
+        </binding>
+      </item>
+	  
+	   <item n="12">
+        <label>Medium bomb load, long range</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.longrangebomb()</script>
+        </binding>
+      </item>
+	  
+	  <item n="13">
+        <label>Light bomb load, long range</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.bomb()</script>
+        </binding>
+      </item>
+	  
+	   <item n="14">
+        <label>Rockets, short range</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.rocket()</script>
+        </binding>
+      </item>
+	  
+	   <item n="15">
+        <label>Rockets, medium range</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.rocket1()</script>
+        </binding>
+      </item>
+
+	    <item n="16">
+        <label>AGM, medium range</label>
+        <binding>
+          <command>nasal</command>
+          <script>load.ground()</script>
+        </binding>
+      </item>
+	  
+	  </menu>
+  </default>
+
+</PropertyList>
+

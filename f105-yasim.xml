@@ -1,0 +1,269 @@
+<!-- 
+F-105D Thunderchief
+
+TECHNICAL NOTES
+Armament: One M61 Vulcan 20mm cannon and more than 12,000 lbs. of ordnance 
+Engine: One Pratt & Whitney J75-P-19W of 24,500 lbs thrust
+Maximum speed: 1,390 mph 
+Cruising speed: 778 mph ( 676 kts at 35000ft )
+Range: 2,206 miles 
+Ceiling: 51,000 ft.
+Span: 34 ft. 11 in. 
+Length: 64 ft. 5 in. 
+Height: 19 ft. 8 in. 
+Weight: 52,838 lbs. maximum 
+-->
+
+<airplane mass="27500" version="YASIM_VERSION_CURRENT">
+
+  <!-- Approach configuration -->
+  <approach speed="135" aoa="7">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.1"/>
+    <control-setting axis="/controls/flight/flaps" value="0.1"/>
+    <control-setting axis="/controls/gear/gear-down" value="1"/>
+    <control-setting axis="/controls/flight/speedbrake" value="1"/>
+    <control-setting axis="/controls/flight/slats" value="1"/>
+  </approach>
+
+  <!-- Cruise configuration.   -->
+  <cruise speed="830" alt="35000">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.84"/>
+    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/gear/gear-down" value="0"/>
+    <control-setting axis="/controls/flight/speedbrake" value="0"/>
+    <control-setting axis="/controls/flight/slats" value="0"/>
+  </cruise>
+
+  <!-- pilot eyepoint -->
+  <cockpit x="4.5" y="0.0" z="1.10"/>
+
+  <!-- main fuselage -->
+  <fuselage ax="8" ay="0" az="-0.1" 
+            bx="-8.4" by="0" bz="0.1"
+            width="1.6" taper= "0.65" midpoint= "0.3" idrag="0.1" />
+			
+ <!--nose cone -->
+  <fuselage ax="8" ay="0" az="-0.1" 
+            bx="10" by="0" bz="-0.1"
+            width="1.2" taper= "0" midpoint= "0" idrag="0.1" />
+
+<!-- spine -->
+  <fuselage ax="5" ay="0" az="1" 
+            bx="-8.4" by="0" bz="0.5"
+            width="1.0" taper= "0.0" midpoint= "0" idrag="0.1" />	
+
+<!--cockpit -->
+  <fuselage ax="4.5" ay="0" az="1" 
+            bx="7.5" by="0" bz="0.4"
+            width="1.0" taper= "0" midpoint= "0" idrag="0.1" />			
+
+
+<!-- outer wing -->
+  <wing x="-0.6" y="2.1" z="0.3"
+        taper="0.6"
+        incidence="0.1"
+        length="4.2"
+        chord="3.4"
+        sweep="44"
+        dihedral="-2">
+    <stall aoa="21" width="8" peak="1.3"/>
+    
+    <flap0 start="0.414" end="0.902" lift="1.2" drag="1.8"/>
+	  <slat start="0.05" end="0.95" lift="1.5" aoa="6" drag="1.15"/>
+   <control-input axis="/controls/flight/flaps" control="SLAT"/>  
+    <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+    <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+     <control-output control="SLAT" prop="surface-positions/slat-pos-norm"/>
+    <control-output control="FLAP0" prop="/surface-positions/aileron-pos-norm"/>
+    <control-speed control="SLAT" transition-time="7"/>
+    <control-speed control="FLAP0" transition-time="1"/>
+</wing>
+
+
+	<!-- inner wing -->
+  
+
+  <mstab x="0.4" y="0.7" z="0.3"
+        taper="0.7"
+        incidence="0.1"
+        length="1.8"
+        chord="4.7"
+        sweep="37"
+        dihedral="0">
+    <stall aoa="21" width="8" peak="1.3"/>
+   
+   <flap0 start="0.1" end="0.413" lift="1.5" drag="1.55"/>
+   
+   <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+     
+    <control-output control="FLAP0" prop="surface-positions/flap-pos-norm"/>
+  
+
+
+   <control-speed control="FLAP0" transition-time="10"/>
+   
+
+  </mstab>
+  
+  
+ <hstab x="-5.6" y="0.41" z="-0.3"
+         taper="0.56" 
+         length="2.75"
+         chord="2.25"
+         sweep="43"
+        dihedral="0">
+    <stall aoa="27" width="15" peak="1.5"/>
+    <flap0 start="0.01" end="1" lift="1.5" drag="1.5"/>
+   
+    <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+    <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+    
+    <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+    
+    <control-speed control="FLAP0" transition-time="1"/>
+    
+
+  </hstab>
+  
+
+  <vstab x="-4.8" y="0.0" z="0.604"
+         taper="0.35"
+         length="4.3"
+         chord="3.2"
+         sweep="40" >
+    <stall aoa="27" width="12" peak="1.8"/>
+    <flap0 start="0.01" end=".8" lift="1.2" drag="1.3"/>
+    <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+    <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+    <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+    <control-speed control="FLAP0" transition-time="1"/>
+  </vstab>
+  
+  
+
+  <mstab x="8.9" y="0.0" z="-0.65"
+         taper="0.0" 
+         length="0.4"
+         chord="0.3"
+         sweep="35"
+        dihedral="0">
+    <stall aoa="27" width="10" peak="1.5"/>
+    
+    <flap0 start="0.0" end="0.15" lift="-0.3" drag="12.9"/>
+    <control-input axis="/controls/flight/speedbrake" control="FLAP0"/>
+    <control-output control="FLAP0" prop="/surface-positions/speedbrake-pos-norm"/>
+     <control-speed control="FLAP0" transition-time="3.0"/>
+
+  </mstab>
+
+  
+
+  
+  <!-- One Pratt & Whitney J75-P-19W of 24,500 lbs thrust  -->
+  
+  <jet x="-3.2" y="0" z="-0.0"
+       mass="5175"
+       thrust="14300"
+	   afterburner="24500"
+       n1-idle="55" n1-max="100" n2-idle="55" n2-max="105"
+       exhaust-speed="1550"
+       rotation="0">
+    <actionpt x="-8.5" y="0" z="0.2"/>
+    <control-input axis="/controls/engines/engine[0]/throttle" src0="0.0" dst0="0.0" src1="0.85" dst1="1.0" control="THROTTLE"/>
+	<control-input axis="/controls/engines/engine[0]/throttle" src0="0.85" dst0="0.0" src1="1.0" dst1="1.0" control="REHEAT"/>
+    <control-output control="REHEAT" prop="engines/engine[0]/afterburner" />
+  </jet>
+
+  <!-- gear -->
+  <!-- nose -->
+  <gear x="5" y="0" z="-2.5" 
+        retract-time="8"
+        compression="0.6" upx="0" upy="0" upz="0.3"
+        castering="1">
+  <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+    <control-speed control="EXTEND" transition-time="4"/>
+  </gear>
+
+  <!-- left main -->
+  <gear x="-0.5" y="2.6" z="-2.4" 
+        retract-time="8" 
+        compression="0.8" upx="-0.02" upy="0.01" upz="0.19"
+        spring="0.8" damp="3">
+    <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-parking" control="BRAKE" />
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+    <control-speed control="EXTEND" transition-time="6"/>
+    <control-speed control="BRAKE" transition-time="1"/>
+  </gear>
+
+  <!-- right main -->
+  <gear x="-0.5" y="-2.6" z="-2.4" 
+        retract-time="8" 
+        compression="0.8" upx="-0.02" upy="0.01" upz="0.19"
+        spring="0.8" damp="3">
+    <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+    <control-input axis="/controls/gear/brake-parking" control="BRAKE" />
+    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+    <control-speed control="EXTEND" transition-time="8"/>
+    <control-speed control="BRAKE" transition-time="1"/>
+  </gear>
+
+<!-- internal tanks carry 1184 US Gal -->
+  <tank x="3.0" y="0" z="1" jet="true" capacity="3400"/>
+  <tank x="1" y="0" z="0.5" jet="true" capacity="1931"/>
+
+  <tank x="0" y="0" z="0.4" jet="true" capacity="1360"/>
+
+  <tank x="0.5" y="0" z="-0.3" jet="true" capacity="1360"/>
+  
+  <!-- Bomb bay tank holds 1300 lt -->
+ 
+ <tank x="0.7" y="0" z="-1.2" jet="true" capacity="2380"/>
+ 
+ <!--left drop tank -->
+  <tank x="-1.5" y="3.3" z="-0.5" jet="true" capacity="3060"/>
+  
+  <!--centre drop tank -->
+  <tank x="0.5" y="0" z="-1.1" jet="true" capacity="4420"/>
+  
+  <!--right drop tank -->
+  <tank x="-1.5" y="-3.3" z="-0.5" jet="true" capacity="3060"/>
+  
+  
+ <!-- Ballast --> 
+
+<ballast x="5" y="0" z="-2.5" mass ="8100"/>
+
+<ballast x="-0.5" y="2.6" z="-2.4" mass ="200"/>
+<ballast x="-0.5" y="-2.6" z="-2.4" mass ="200"/>
+
+<!-- external payloads -->
+<weight x="-2.5" y="4.2" z="-0.4" mass-prop="sim/weight[0]/weight-lb" size="0.76" />
+<weight x="-1.5" y="3.3" z="-0.5" mass-prop="sim/weight[1]/weight-lb" size="0.76" />
+<weight x="0.5" y="0" z="-1.1" mass-prop="sim/weight[2]/weight-lb" size="0.76" />
+<weight x="-1.5" y="-3.3" z="-0.5" mass-prop="sim/weight[3]/weight-lb" size="0.76" />
+<weight x="-2.5" y="-4.2" z="-0.4" mass-prop="sim/weight[4]/weight-lb" size="0.76" />
+
+
+  
+  <!-- Hook -->
+	<hook x="-5"
+				y="0.0"
+				z="-1"
+				length="2.7"
+				down-angle="77"
+				up-angle="-13">
+		<control-input axis="/controls/gear/tailhook"
+									 control="HEXTEND"/>
+		<control-speed control="HEXTEND"
+									 transition-time="5"/>
+	</hook>
+
+
+
+
+</airplane>

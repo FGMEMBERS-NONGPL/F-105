@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+         <name type="string">USAF 561 TFS</name>
+     <texture-fuselage>Liveries/561TFS/fuselage2.png</texture-fuselage>
+     <texture-wing>Liveries/561TFS/wings.png</texture-wing>
+	 <texture-pylon>Liveries/561TFS/pylons.png</texture-pylon>
+	  <texture-vtail>Liveries/561TFS/vtail.png</texture-vtail>
+	 <texture-htail>Liveries/561TFS/htail.png</texture-htail>
+      <texture-pylon>Liveries/561TFS/pylons.png</texture-pylon>
+	   <texture-tanks>Liveries/561TFS/tanks.png</texture-tanks>
+     <texture-misc>Liveries/561TFS/misc.png</texture-misc>
+
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>

@@ -1,0 +1,118 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "ac3dmat0.001" rgb 0 0 0 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "ac3dmat1.001" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+OBJECT world
+kids 3
+OBJECT poly
+name "box"
+data 4
+Mesh
+crease 45.000000
+numvert 8
+-0.016156 0.02835 -0.027538
+0.015542 0.028473 -0.027538
+0.015542 0.028473 0.027523
+-0.016156 0.02835 0.027523
+-0.016156 -0.0266 0.027523
+0.015542 -0.026588 0.027523
+0.015542 -0.026588 -0.027538
+-0.016156 -0.0266 -0.027538
+numsurf 4
+SURF 0x20
+mat 1
+refs 4
+7 0.0 0.0
+6 1.0 0.0
+5 1.0 1.0
+4 0.0 1.0
+SURF 0x20
+mat 1
+refs 4
+0 0.0 0.0
+3 1.0 0.0
+2 1.0 1.0
+1 0.0 1.0
+SURF 0x20
+mat 1
+refs 4
+3 0.0 0.0
+4 1.0 0.0
+5 1.0 1.0
+2 0.0 1.0
+SURF 0x20
+mat 1
+refs 4
+7 1.0 1.0
+0 0.0 1.0
+1 0.0 0.0
+6 1.0 0.0
+kids 0
+OBJECT poly
+name "face"
+data 8
+Mesh.002
+texture "ivsi-6kfpm.rgb"
+texrep 1 1
+crease 45.000000
+numvert 4
+0.015542 -0.026588 -0.027538
+0.015542 -0.026588 0.027523
+0.015542 0.028474 0.027523
+0.015542 0.028474 -0.027538
+numsurf 1
+SURF 0x20
+mat 2
+refs 4
+0 1.00977003574 -0.00585938012227
+3 1.00977003574 1.00585997105
+2 -0.00585938012227 1.00585997105
+1 -0.00585938012227 -0.00585938012227
+kids 0
+OBJECT poly
+name "needle"
+data 8
+Mesh.001
+crease 45.000000
+numvert 7
+0.016279 0.002202 -0.003137
+0.016279 -0.000702 -0.003137
+0.016279 -0.000702 0.00162
+0.016279 0.002202 0.00162
+0.016279 0.002202 0.014813
+0.016279 -0.000702 0.014813
+0.016279 0.00075 0.019936
+numsurf 5
+SURF 0x20
+mat 3
+refs 3
+1 0.0 1.0
+0 1.0 1.0
+3 1.0 0.0
+SURF 0x20
+mat 3
+refs 3
+1 0.0 1.0
+3 1.0 0.0
+2 0.0 0.0
+SURF 0x20
+mat 4
+refs 3
+4 1.0 1.0
+2 0.0 0.0
+3 1.0 0.0
+SURF 0x20
+mat 4
+refs 3
+2 0.0 0.0
+4 1.0 1.0
+5 0.0 1.0
+SURF 0x20
+mat 4
+refs 3
+6 1.0 0.0
+5 0.0 1.0
+4 1.0 1.0
+kids 0

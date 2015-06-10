@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!-- Mk83 Low-Drag GP Bomb wrapper, by Dave Culp -->
+
+<PropertyList>
+
+ <path>mk83.ac</path>
+
+ <animation>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+
+
+ 
+
+</PropertyList>

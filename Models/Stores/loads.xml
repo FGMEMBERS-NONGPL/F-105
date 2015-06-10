@@ -1,0 +1,766 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	
+
+<!--station left 1 -->
+
+<model>
+<name>Left ECM</name>
+<path>Aircraft/F-105/Models/Stores/ecm.xml</path>
+
+<offsets>
+ <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>-0.2</z-m>
+     <pitch-deg>0</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>Left ECM</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[0]/selected</property>
+<value>ECM</value>
+</equals>
+<equals>
+<property>controls/armament/station[0]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+<model>
+<name>left1 MER 117</name>
+<path>Aircraft/F-105/Models/Stores/6x750.xml</path>
+
+<offsets>
+  <x-m>3.2</x-m>
+     <y-m>-4.2</y-m>
+     <z-m>0.65</z-m>
+     <pitch-deg>0</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>left1 MER 117</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[0]/selected</property>
+<value>6xM177</value>
+</equals>
+<equals>
+<property>controls/armament/station[0]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+ 
+
+<model>
+<name>left1 2xlau18</name>
+<path>Aircraft/F-105/Models/Stores/2xSNEB.xml</path>
+
+<offsets>
+  <x-m>2.7</x-m>
+     <y-m>-4.15</y-m>
+     <z-m>-0.45</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>left1 2xlau18</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[0]/selected</property>
+<value>2xLAU18</value>
+</equals>
+<equals>
+<property>controls/armament/station[0]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>left1 lau18</name>
+<path>Aircraft/F-105/Models/Stores/sneb/sneb.xml</path>
+
+<offsets>
+  <x-m>2.7</x-m>
+     <y-m>-4.15</y-m>
+     <z-m>-0.45</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>left1 lau18</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[0]/selected</property>
+<value>LAU18</value>
+</equals>
+<equals>
+<property>controls/armament/station[0]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>left1 aim9</name>
+<path>Aircraft/F-105/Models/Stores/aim9/AIM9L.xml</path>
+
+<offsets>
+  <x-m>2.3</x-m>
+     <y-m>-4.17</y-m>
+     <z-m>-0.47</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>left1 aim9</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[0]/selected</property>
+<value>AIM-9 Sidewinder</value>
+</equals>
+<equals>
+<property>controls/armament/station[0]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+
+<model>
+<name>left1 2xaim9</name>
+<path>Aircraft/F-105/Models/Stores/2xaim9.xml</path>
+
+<offsets>
+  <x-m>2.5</x-m>
+     <y-m>-4.17</y-m>
+     <z-m>-0.42</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>left1 2xaim9</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[0]/selected</property>
+<value>2xAIM-9 Sidewinder</value>
+</equals>
+<equals>
+<property>controls/armament/station[0]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+	
+<!-- station left 2 -->
+
+<model>
+<name>Left Droptank</name>
+<path>Aircraft/F-105/Models/Stores/droptank.xml</path>
+
+<offsets>
+  <x-m>1.5</x-m>
+     <y-m>-3.25</y-m>
+     <z-m>-0.7</z-m>
+     <pitch-deg>0</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>Left Droptank</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[1]/selected</property>
+<value>Droptank450</value>
+</equals>
+<equals>
+<property>controls/armament/station[1]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>left2 MER 117</name>
+<path>Aircraft/F-105/Models/Stores/6x750.xml</path>
+
+<offsets>
+   <x-m>2</x-m>
+     <y-m>-3.25</y-m>
+     <z-m>0.6</z-m>
+     <pitch-deg>0</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>left2 MER 117</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[1]/selected</property>
+<value>6xM177</value>
+</equals>
+<equals>
+<property>controls/armament/station[1]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+
+
+<model>
+<name>left2 2xlau18</name>
+<path>Aircraft/F-105/Models/Stores/2xSNEB.xml</path>
+
+<offsets>
+  <x-m>1.6</x-m>
+    <y-m>-3.25</y-m>
+     <z-m>-0.7</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>left2 2xlau18</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[1]/selected</property>
+<value>2xLAU18</value>
+</equals>
+<equals>
+<property>controls/armament/station[1]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+
+<model>
+<name>left2 lau18</name>
+<path>Aircraft/F-105/Models/Stores/sneb/sneb.xml</path>
+
+<offsets>
+  <x-m>1.2</x-m>
+    <y-m>-3.25</y-m>
+     <z-m>-0.6</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>left2 lau18</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[1]/selected</property>
+<value>LAU18</value>
+</equals>
+<equals>
+<property>controls/armament/station[1]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>left2 bullpup</name>
+<path>Aircraft/F-105/Models/Stores/bullpup/agm12.xml</path>
+
+<offsets>
+  <x-m>1.2</x-m>
+    <y-m>-3.25</y-m>
+     <z-m>-0.6</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>left2 bullpup</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[1]/selected</property>
+<value>AGM-12 Bullpup</value>
+</equals>
+<equals>
+<property>controls/armament/station[1]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+
+<!-- Centre Station-->
+
+<model>
+<name>Centre Droptank1</name>
+<path>Aircraft/F-105/Models/Stores/droptank.xml</path>
+
+<offsets>
+  <x-m>-0.65</x-m>
+     <y-m>0</y-m>
+     <z-m>-1.5</z-m>
+     <pitch-deg>-2</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>Centre Droptank1</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[2]/selected</property>
+<value>Droptank450</value>
+</equals>
+<equals>
+<property>controls/armament/station[2]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+<model>
+<name>Centre Droptank2</name>
+<path>Aircraft/F-105/Models/Stores/droptank.xml</path>
+
+<offsets>
+  <x-m>-0.65</x-m>
+     <y-m>0</y-m>
+     <z-m>-1.5</z-m>
+     <pitch-deg>-2</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>Centre Droptank2</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[2]/selected</property>
+<value>Droptank650</value>
+</equals>
+<equals>
+<property>controls/armament/station[2]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>Centre MER 117</name>
+<path>Aircraft/F-105/Models/Stores/6x750.xml</path>
+
+<offsets>
+  <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>-0.2</z-m>
+     <pitch-deg>0</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>Centre MER 117</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[2]/selected</property>
+<value>6xM177</value>
+</equals>
+<equals>
+<property>controls/armament/station[2]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>Centre lau18</name>
+<path>Aircraft/F-105/Models/Stores/sneb/sneb.xml</path>
+
+<offsets>
+  <x-m>-1.4</x-m>
+     <y-m>0</y-m>
+     <z-m>-1.38</z-m>
+     <pitch-deg>-5</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>Centre lau18</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[2]/selected</property>
+<value>LAU18</value>
+</equals>
+<equals>
+<property>controls/armament/station[2]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+	
+<!-- station right 2 -->
+
+<model>
+<name>Right Droptank</name>
+<path>Aircraft/F-105/Models/Stores/droptank.xml</path>
+
+<offsets>
+   <x-m>1.5</x-m>
+     <y-m>3.25</y-m>
+     <z-m>-0.7</z-m>
+     <pitch-deg>0</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>Right Droptank</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[3]/selected</property>
+<value>Droptank450</value>
+</equals>
+<equals>
+<property>controls/armament/station[3]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>right2 MER 117</name>
+<path>Aircraft/F-105/Models/Stores/6x750.xml</path>
+
+<offsets>
+   <x-m>2</x-m>
+     <y-m>3.25</y-m>
+     <z-m>0.6</z-m>
+     <pitch-deg>0</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>right2 MER 117</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[3]/selected</property>
+<value>6xM177</value>
+</equals>
+<equals>
+<property>controls/armament/station[3]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>right2 2xlau18</name>
+<path>Aircraft/F-105/Models/Stores/2xSNEB.xml</path>
+
+<offsets>
+  <x-m>1.6</x-m>
+    <y-m>3.25</y-m>
+     <z-m>-0.7</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>right2 2xlau18</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[3]/selected</property>
+<value>2xLAU18</value>
+</equals>
+<equals>
+<property>controls/armament/station[3]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+<model>
+<name>right2 lau18</name>
+<path>Aircraft/F-105/Models/Stores/sneb/sneb.xml</path>
+
+<offsets>
+  <x-m>1.2</x-m>
+    <y-m>3.25</y-m>
+     <z-m>-0.6</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>right2 lau18</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[3]/selected</property>
+<value>LAU18</value>
+</equals>
+<equals>
+<property>controls/armament/station[3]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>right2 bullpup</name>
+<path>Aircraft/F-105/Models/Stores/bullpup/agm12.xml</path>
+
+<offsets>
+  <x-m>1.2</x-m>
+    <y-m>3.25</y-m>
+     <z-m>-0.6</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>right2 bullpup</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[3]/selected</property>
+<value>AGM-12 Bullpup</value>
+</equals>
+<equals>
+<property>controls/armament/station[3]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+<!-- station right 1 -->
+	
+<model>
+<name>right1 MER 117</name>
+<path>Aircraft/F-105/Models/Stores/6x750.xml</path>
+
+<offsets>
+  <x-m>3.2</x-m>
+     <y-m>4.2</y-m>
+     <z-m>0.65</z-m>
+     <pitch-deg>0</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>right1 MER 117</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[4]/selected</property>
+<value>6xM177</value>
+</equals>
+<equals>
+<property>controls/armament/station[4]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+  
+
+  
+<model>
+<name>right1 2xlau18</name>
+<path>Aircraft/F-105/Models/Stores/2xSNEB.xml</path>
+
+<offsets>
+  <x-m>2.7</x-m>
+     <y-m>4.15</y-m>
+     <z-m>-0.45</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>right1 2xlau18</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[4]/selected</property>
+<value>2xLAU18</value>
+</equals>
+<equals>
+<property>controls/armament/station[4]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+<model>
+<name>right1 lau18</name>
+<path>Aircraft/F-105/Models/Stores/sneb/sneb.xml</path>
+
+<offsets>
+  <x-m>2.7</x-m>
+     <y-m>4.15</y-m>
+     <z-m>-0.45</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>right1 lau18</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[4]/selected</property>
+<value>LAU18</value>
+</equals>
+<equals>
+<property>controls/armament/station[4]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+<model>
+<name>right1 aim9</name>
+<path>Aircraft/F-105/Models/Stores/aim9/AIM9L.xml</path>
+
+<offsets>
+  <x-m>2.3</x-m>
+     <y-m>4.17</y-m>
+     <z-m>-0.47</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>right1 aim9</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[4]/selected</property>
+<value>AIM-9 Sidewinder</value>
+</equals>
+<equals>
+<property>controls/armament/station[4]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+
+<model>
+<name>right1 2xaim9</name>
+<path>Aircraft/F-105/Models/Stores/2xaim9.xml</path>
+
+<offsets>
+  <x-m>2.5</x-m>
+     <y-m>4.17</y-m>
+     <z-m>-0.42</z-m>
+     <pitch-deg>-4</pitch-deg>
+</offsets>
+</model>	
+
+<animation>
+<type>select</type>
+<object-name>right1 2xaim9</object-name>      
+<condition>
+<and>
+<equals>
+<property>sim/weight[4]/selected</property>
+<value>2xAIM-9 Sidewinder</value>
+</equals>
+<equals>
+<property>controls/armament/station[4]/release</property>
+<value>false</value>
+</equals>
+</and>
+</condition>
+</animation>
+
+</PropertyList>

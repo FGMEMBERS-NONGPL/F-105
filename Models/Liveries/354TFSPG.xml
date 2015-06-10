@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+         <name type="string">USAF 354 TFS - Pussy Galore</name>
+     <texture-fuselage>Liveries/354TFSPG/fuselage2.png</texture-fuselage>
+     <texture-wing>Liveries/354TFSPG/wings.png</texture-wing>
+	 <texture-pylon>Liveries/354TFSPG/pylons.png</texture-pylon>
+	  <texture-vtail>Liveries/354TFSPG/vtail.png</texture-vtail>
+	 <texture-htail>Liveries/354TFSPG/htail.png</texture-htail>
+      <texture-pylon>Liveries/354TFSPG/pylons.png</texture-pylon>
+	   <texture-tanks>Liveries/354TFSPG/tanks.png</texture-tanks>
+    <texture-misc>Liveries/354TFSPG/misc.png</texture-misc>
+
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>

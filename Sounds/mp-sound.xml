@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<fx>
+
+<!-- External Sounds -->
+  <engine>
+      <name>engine-start-outside</name>
+      <mode>once</mode>
+      <path>Aircraft/F-105/Sounds/f100-startup.wav</path>
+     <condition>
+<and>
+ 
+<greater-than>  
+   <property>engines/engine[0]/rpm</property>
+   <value>0.5</value>
+   
+  </greater-than>
+  <less-than>
+                <property>velocities/groundspeed-kt</property>
+                <value>1</value>
+            </less-than>
+  <not>
+   <property>/sim/current-view/internal</property>
+  </not>
+</and>
+</condition>
+      <volume>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.09 </factor>
+        <min> 0.3 </min>
+        <max> 0.9 </max>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/n2</property>
+        <factor> 0.01 </factor>
+	<min> 0.0 </min>
+	<max> 0.9 </max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+	
+	 <engine>
+      <name>turbine</name>
+      <mode>looped</mode>
+      <path>Aircraft/F-105/Sounds/f100-whine.wav</path>
+      <condition>
+        <property>engines/engine/running</property>
+        <not>
+          <property>/sim/current-view/internal</property>
+        </not>
+      </condition>
+      <orientation>
+        <x>   0 </x>
+        <y>   0.01 </y>
+        <z> 180 </z>
+        <inner-cone> 180.0 </inner-cone>
+        <outer-cone> 360.0 </outer-cone>
+        <outer-gain>   0.2 </outer-gain>
+      </orientation>
+      <volume>
+        <property>engines/engine/n2</property>
+        <factor>0.08</factor>
+        <min>0.3</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>engines/engine/n2</property>
+        <factor>0.01</factor>
+	<min>0</min>
+	<max>0.9</max>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+ 
+
+  <engine>
+   <name>engine1</name>
+   <mode>looped</mode>
+   <path>Aircraft/DavePack/Sounds/milpower.wav</path>
+   <condition>
+    <property>engines/engine[0]/running</property>
+    <not>
+      <property>sim/current-view/internal</property>
+    </not>
+   </condition>
+   <orientation>
+    <x>0.0</x>
+    <y>0.01</y>
+    <z>180.0</z>
+    <inner-cone>180.0</inner-cone>
+    <outer-cone>360.0</outer-cone>
+    <outer-gain>0.2</outer-gain>
+   </orientation>
+   <volume>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor>0.5</factor>
+    <min>0.1</min>
+    <max>0.5</max>
+   </volume>
+  </engine>
+  
+  
+  <engine1-thrust-rh>
+  <name>Engine Thrust Reheat</name>
+  <mode>looped</mode>
+  <path>Aircraft/F-105/Sounds/rhthrust.wav</path>
+  <position>
+   <x>8</x>
+   <y>0.01</y>
+   <z>0</z>
+   </position>
+   <orientation>
+	<x>1</x>
+    <y>0</y>
+    <z>0</z>
+    <inner-angle>40.0</inner-angle>
+    <outer-angle>60.0</outer-angle>
+    <outer-gain>0.1</outer-gain>
+   </orientation>
+   <volume>
+    <property>engines/engine[0]/reheat</property>
+    <factor>1.25</factor>
+	<offset>-0.15</offset>
+	<min>0.00</min>
+	<max>5.0</max>
+   </volume>
+   <volume>
+    <property>sim/sound/canopy-view-modifier</property>
+    <factor>7.5</factor>
+    <offset>0</offset>
+    <min>0.0</min>
+	<max>1.0</max>
+   </volume>
+   <reference-dist>50</reference-dist>
+   <max-dist>8000</max-dist>
+  </engine1-thrust-rh>
+  
+ <engine1-reheat>
+  <name>Reheat</name>
+  <mode>looped</mode>
+  <path>Aircraft/F-105/Sounds/reheat.wav</path>
+  <condition>
+   <not>
+    <property>sim/current-view/internal</property>
+   </not>
+  </condition>
+  <position>
+   <x>15.5</x>
+   <y>0.01</y>
+   <z>0</z>
+   </position>
+   <orientation>
+	<x>1</x>
+    <y>0</y>
+    <z>0</z>
+    <inner-angle>70.0</inner-angle>
+    <outer-angle>200.0</outer-angle>
+    <outer-gain>0.05</outer-gain>
+   </orientation>
+   <volume>
+    <property>engines/engine[0]/afterburner</property>
+    <factor>0.5</factor>
+	<offset>-0.05</offset>
+	<min>0.0</min>
+	<max>0.60</max>
+	</volume>
+	<reference-dist>15</reference-dist>
+   <max-dist>1800</max-dist>
+  </engine1-reheat>
+  
+  <engine>
+   <name>compressor whine</name>
+   <path>Sounds/turbojet_fan.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <not>
+     <property>sim/current-view/internal</property>
+    </not>
+    <property>engines/engine[0]/running</property>
+   </condition>
+   <orientation>
+    <x> 0.0</x>
+    <y>0.01</y>
+    <z> 180.0</z>
+    <inner-cone>50.0</inner-cone>
+    <outer-cone>180.0</outer-cone>
+    <outer-gain>0.5</outer-gain>
+   </orientation>
+   <pitch>
+    <property>engines/engine[0]/n1</property>
+    <offset>0.7</offset>
+    <factor>.003</factor>
+   </pitch>
+   <volume>
+    <property>engines/engine[0]/n1</property>
+    <offset>0.15</offset>
+    <factor>-0.003</factor>
+    <min>0.05</min>
+    <max>0.15</max>
+   </volume>
+  </engine>
+  
+  
+   <engine>
+      <name>engine</name>
+      <path>Aircraft/F-105/Sounds/jet-blast.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <property>engines/engine[0]/running</property>
+		<not>
+        	<property>sim/current-view/internal</property>
+		<property>engines/engine/out-of-fuel</property>
+     	</not>
+      </condition>
+       <position>
+    <x>18.6</x>
+	<y>0</y>
+	<z>2.37</z>
+   </position>
+   <orientation>
+	<x>1.0</x>
+    <y>0.01</y>
+    <z>0</z>
+    <inner-angle>35.0</inner-angle>
+    <outer-angle>90</outer-angle>
+    <outer-gain>0.45</outer-gain>
+   </orientation>
+ 
+   <volume>
+    <property>engines/engine[0]/n1</property>
+    <factor>0.014</factor>
+    <offset>-0.45</offset>
+   </volume>
+ 
+   <reference-dist>20</reference-dist>
+   <max-dist>3000</max-dist>
+    </engine>
+  
+  
+  <shutdown>
+   <name>shutdown</name>
+   <path>Aircraft/DavePack/Sounds/turbine-shutdown.wav</path>
+   <condition>
+     <not>
+      <property>sim/current-view/internal</property>
+     </not>
+     <equals>
+      <property>engines/engine[0]/running</property>
+      <value>false</value>
+     </equals>
+   </condition>
+  </shutdown>
+  
+  
+  <squeal>
+   <name>squeal</name>
+   <path>Sounds/squeal.wav</path>
+   <condition>
+    <or>
+     <property>gear/gear[0]/wow</property>
+     <property>gear/gear[1]/wow</property>
+     <property>gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>velocities/speed-down-fps</property>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+   <volume>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+    <max>1.0</max>
+   </volume>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+   <pitch>
+    <property>velocities/airspeed-kt</property>
+    <factor>0.0025</factor>
+    <offset>1.2</offset>
+   </pitch>
+  </squeal>
+  
+  
+  
+   
+
+    <gun>
+      <name>Gun down left</name>
+      <mode>looped</mode>
+      <path>Aircraft/F-105/Sounds/m61.wav</path>
+      <condition>
+        <and>
+          <property>controls/armament/trigger</property>
+          <property>ai/submodels/submodel[0]/count</property>
+        </and>
+      </condition>
+      <position>
+        <x> -5.084 </x>
+        <y> -0.306 </y>
+        <z>  0.237 </z>
+      </position>
+      <reference-dist>100</reference-dist>
+      <max-dist>500</max-dist>
+    </gun>
+
+    
+  
+	
+	</fx>
+
+</PropertyList>

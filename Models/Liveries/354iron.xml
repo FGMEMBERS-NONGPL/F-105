@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+         <name type="string">USAF 354 TFS - Iron Duke</name>
+     <texture-fuselage>Liveries/354iron/fuselage2.png</texture-fuselage>
+     <texture-wing>Liveries/354iron/wings.png</texture-wing>
+	 <texture-pylon>Liveries/354iron/pylons.png</texture-pylon>
+	  <texture-vtail>Liveries/354iron/vtail.png</texture-vtail>
+	 <texture-htail>Liveries/354iron/htail.png</texture-htail>
+      <texture-pylon>Liveries/354iron/pylons.png</texture-pylon>
+	   <texture-tanks>Liveries/354iron/tanks.png</texture-tanks>
+     <texture-misc>Liveries/354iron/misc.png</texture-misc>
+
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>

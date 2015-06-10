@@ -4,194 +4,188 @@
 
  <path>F105D.ac</path>
 
+ 
+  <!-- MP sound call -->
+  <sound><path>Aircraft/F-105/Sounds/mp-sound.xml</path></sound>
+ 
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/F-105/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+ 
+ <!-- fuselage -->
+  <animation>
+        <type>material</type>
+        <object-name>fuselage</object-name>
+		<object-name>refueling-bay-door</object-name>
+        <object-name>camera</object-name>
+		<object-name>probe-door-fwd</object-name>
+		<object-name>probe</object-name>
+		<object-name>pitot-tube</object-name>
+		<object-name>canopy-frame</object-name>
+		<object-name>scoop</object-name>
+		<object-name>ventral-fin</object-name>
+		
+		<object-name>cooling-duct</object-name>
+		<object-name>NoseGearDoorRight</object-name>
+		<object-name>NoseGearDoorLeft</object-name>
+		
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-fuselage</texture-prop>
+        <texture>fuselage2.png</texture>
+    </animation>
+ 
+ 
+	
+	
+ 
+ 
+ <!-- wings -->
+    <animation>
+        <type>material</type>
+		<object-name>LWing.001</object-name>
+        <object-name>RWing</object-name>
+        <object-name>LSlat</object-name>
+		<object-name>spoilers-left</object-name>
+		<object-name>LAileron</object-name>
+		<object-name>LFlap</object-name>
+		<object-name>RSlat</object-name>
+		<object-name>RFlap</object-name>
+		<object-name>RAileron</object-name>
+		<object-name>spoilers-right</object-name>
+		
+		<object-name>RMainGearDoor-inner</object-name>
+        <object-name>RMainGearDoor-lower</object-name>
+         <object-name>LMainGearDoor-inner</object-name>
+        <object-name>LMainGearDoor-lower</object-name>		 
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-wing</texture-prop>
+        <texture>wings.png</texture>
+    </animation>
+	
+	
+	
+		<!-- H-tail -->
+    <animation>
+        <type>material</type>
+		<object-name>RHStab</object-name>
+        <object-name>RHStab-fairing</object-name>
+        <object-name>LHStab</object-name>
+		<object-name>LHStab-fairing</object-name>
+		
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-htail</texture-prop>
+        <texture>htail.png</texture>
+    </animation>
+	
+	<!-- V tail -->
+    <animation>
+        <type>material</type>
+		<object-name>vstab</object-name>
+        <object-name>rudder</object-name>
+		<property-base>sim/model/livery</property-base>
+        <texture-prop>texture-vtail</texture-prop>
+        <texture>vtail.png</texture>
+    </animation>
+	
+	<!-- pylons -->
+    <animation>
+        <type>material</type>
+		<object-name>pylon-outer</object-name>
+		<object-name>pylon-inner</object-name>
+		<object-name>MER</object-name>
+		<object-name>centerline</object-name>
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-pylon</texture-prop>
+        <texture>pylons.png</texture>
+    </animation>
+	
 
+	
+	<!-- tanks  -->
+    <animation>
+        <type>material</type>
+		<object-name>RDropTank</object-name>
+        <object-name>LDropTank</object-name>
+        
+		
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-tanks</texture-prop>
+        <texture>tanks.png</texture>
+    </animation>
+  
+<!-- bits-->
+ <animation>
+        <type>material</type>
+		<object-name>refueling-bay-door</object-name>
+       
+        
+		
+        <property-base>sim/model/livery</property-base>
+        <texture-prop>texture-misc</texture-prop>
+        <texture>misc.png</texture>
+    </animation>
+ 
+ 
+ <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>canopy-glass</object-name>
+	<object-name>windscreen</object-name>
+	<object-name>mirror</object-name>
+	<object-name>hud-glass</object-name>
+	
+</animation>
+ 
+ 
 <!-- ******************** instruments *******************-->
 
  <model>
-  <path>Aircraft/DavePack/Instruments/AI/AI.xml</path>
+  <path>Aircraft/F-105/Models/panel.xml</path>
   <offsets>
-   <x-m>-5.11</x-m>
+   <x-m>0</x-m>
    <y-m> 0</y-m>
-   <z-m>0.97</z-m>
+   <z-m>0</z-m>
   </offsets>
  </model>
 
+ 
+
+<!-- pilot -->
  <model>
-  <path>Aircraft/DavePack/Instruments/RDMI/RDMI.xml</path>
-  <offsets>
-   <x-m>-5.12</x-m>
-   <y-m> 0</y-m>
-   <z-m>0.865</z-m>
-  </offsets>
+ <name>pilot</name>
+   <path>Aircraft/F-105/Models/pilots/pilot.xml</path>
+   <offsets>
+     <x-m>-4.3</x-m>
+     <y-m>0</y-m>
+     <z-m>0.62</z-m>
+     <pitch-deg>0</pitch-deg>
+   </offsets>
  </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/RDMI/nav-select.xml</path>
-  <offsets>
-   <x-m>-5.12</x-m>
-   <y-m> 0.08</y-m>
-   <z-m>0.835</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/n2/n2.xml</path>
-  <offsets>
-   <x-m>-5.112</x-m>
-   <y-m>0.17</y-m>
-   <z-m>0.908</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/FuelFlow/ff.xml</path>
-  <offsets>
-   <x-m>-5.112</x-m>
-   <y-m>0.23</y-m>
-   <z-m>0.908</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/EGT/EGT.xml</path>
-  <offsets>
-   <x-m>-5.115</x-m>
-   <y-m>0.17</y-m>
-   <z-m>0.84</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/AS/800/airspeed.xml</path>
-  <offsets>
-   <x-m>-5.12</x-m>
-   <y-m>-0.09</y-m>
-   <z-m>0.967</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/AOA/aoa.xml</path>
-  <offsets>
-   <x-m>-5.12</x-m>
-   <y-m>-0.17</y-m>
-   <z-m>0.99</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/Alt/version2/altimeter.xml</path>
-  <offsets>
-   <x-m>-5.12</x-m>
-   <y-m>0.09</y-m>
-   <z-m>0.967</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/IVSI/IVSI.xml</path>
-  <offsets>
-   <x-m>-5.12</x-m>
-   <y-m> 0.08</y-m>
-   <z-m> 0.89</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-105/Models/Instruments/Flaps/flaps.xml</path>
-  <offsets>
-   <x-m>-5.09</x-m>
-   <y-m>-0.34</y-m>
-   <z-m> 0.855</z-m>
-   <heading-deg>20</heading-deg>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-105/Models/Instruments/Gear/gear.xml</path>
-  <offsets>
-   <x-m>-5.09</x-m>
-   <y-m>-0.29</y-m>
-   <z-m> 0.82</z-m>
-   <heading-deg>20</heading-deg>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/PanelLights/lights.xml</path>
-  <offsets>
-   <x-m>-5.10</x-m>
-   <y-m>-0.26</y-m>
-   <z-m>0.907</z-m>
-   <heading-deg>20</heading-deg>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-105/Models/Instruments/Fuel/fuel.xml</path>
-  <offsets>
-   <x-m>-5.12</x-m>
-   <y-m>0.23</y-m>
-   <z-m>0.84</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/Fuel/fuel-dump-switch.xml</path>
-  <offsets>
-   <x-m>-5.10</x-m>
-   <y-m>0.30</y-m>
-   <z-m>0.85</z-m>
-   <heading-deg>-20.0</heading-deg>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-105/Models/Instruments/Gunsight/gunsight.xml</path>
-  <offsets>
-   <x-m>-5.10</x-m>
-   <y-m>0</y-m>
-   <z-m>1.01</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/GMeter/gmeter.xml</path>
-  <offsets>
-   <x-m>-5.12</x-m>
-   <y-m>0.165</y-m>
-   <z-m>0.97</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/F-105/Models/Instruments/radar/radar.xml</path>
-  <offsets>
-   <x-m>-5.10</x-m>
-   <y-m> 0.0</y-m>
-   <z-m> 0.78</z-m>
-   <pitch-deg>-12.0</pitch-deg>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/SAI/sai.xml</path>
-  <offsets>
-   <x-m>-5.09</x-m>
-   <y-m>-0.16</y-m>
-   <z-m> 0.89</z-m>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Effects/Pilot/pilot-usaf.xml</path>
-  <offsets>
-   <x-m>-4.4</x-m>
-   <y-m>0</y-m>
-   <z-m>0.6</z-m>
-  </offsets>
- </model>
-
+ 
+ <!-- Suppress Seat/Pilot Models in Cockpit View -->
+ <animation>
+  <type>select</type>
+  <object-name>pilot</object-name>
+   <object-name>canopy-glass</object-name>
+	<object-name>windscreen</object-name>
+  <condition>
+   <not>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+ 
+ 
+<!--
  <model>
   <path>Aircraft/DavePack/Effects/Pilot/seat.xml</path>
   <offsets>
@@ -201,24 +195,7 @@
   </offsets>
  </model>
 
- <model>
-  <path>Aircraft/DavePack/Instruments/MagCompass/comp.xml</path>
-  <offsets>
-   <x-m>-5.1</x-m>
-   <y-m>-0.175</y-m>
-   <z-m> 1.25</z-m>
-   <heading-deg>10.0</heading-deg>
-  </offsets>
- </model>
-
- <model>
-  <path>Aircraft/DavePack/Instruments/ALR46/alr46.xml</path>
-  <offsets>
-   <x-m>-5.1</x-m>
-   <y-m> 0.12</y-m>
-   <z-m> 1.06</z-m>
-  </offsets>
- </model>
+ -->
 
  <!-- ####################### Effects ############################ -->
 
@@ -235,14 +212,62 @@
 
  <!-- Engine Afterburner Plume -->
  <model>
-   <path>Aircraft/DavePack/Effects/Afterburner/plume.xml</path>
+   <path>Aircraft/F-105/Models/Effects/Afterburner/EJ200-L.xml</path>
    <offsets>
-     <x-m>8</x-m>
+      <x-m>9</x-m>
      <y-m>0</y-m>
-     <z-m>0.2</z-m>
+     <z-m>0.1</z-m>
      <pitch-deg>0</pitch-deg>
    </offsets>
  </model>
+ 
+   <!-- Display Smoke -->
+  <model>
+    <path>Aircraft/F-105/Models/Effects/smoke/smokeB.xml</path>
+    <offsets>
+     <x-m>11</x-m>
+     <y-m>0</y-m>
+     <z-m>0.1</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F-105/Models/Effects/smoke/smokeW.xml</path>
+    <offsets>
+     <x-m>11</x-m>
+     <y-m>0</y-m>
+     <z-m>0.1</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F-105/Models/Effects/smoke/smokeR.xml</path>
+    <offsets>
+     <x-m>11</x-m>
+     <y-m>0</y-m>
+     <z-m>0.1</z-m>
+    </offsets>
+  </model>
+  
+  <!-- engine smoke -->
+  
+   <model>
+    <path>Aircraft/F-105/Models/Effects/smoke/smokeL.xml</path>
+    <offsets>
+     <x-m>11</x-m>
+     <y-m>0</y-m>
+     <z-m>0.1</z-m>
+    </offsets>
+  </model>
+  
+   <model>
+    <path>Aircraft/F-105/Models/Effects/trail/trailL.xml</path>
+    <offsets>
+     <x-m>11</x-m>
+     <y-m>0</y-m>
+     <z-m>0.1</z-m>
+    </offsets>
+  </model>
 
  <!-- Left wing-tip vortex -->
  <model>
@@ -266,23 +291,13 @@
    </offsets>
  </model>
 
- <!-- Upper beacon flash -->
+<!-- Light pack -->
  <model>
-   <path>Aircraft/DavePack/Effects/Red-beacon/flash.xml</path>
+   <path>Aircraft/F-105/Models/Lights/LightPack.xml</path>
    <offsets>
-     <x-m>-0.91</x-m>
+     <x-m>0</x-m>
      <y-m>0</y-m>
-     <z-m>1.475</z-m>
-   </offsets>
- </model>
-
- <!-- Lower beacon flash -->
- <model>
-   <path>Aircraft/DavePack/Effects/Red-beacon/flash2.xml</path>
-   <offsets>
-     <x-m>-7.01</x-m>
-     <y-m>0</y-m>
-     <z-m>-0.82</z-m>
+     <z-m>0</z-m>
    </offsets>
  </model>
 
@@ -426,7 +441,7 @@
   <object-name>RMainGearBrace</object-name>
   <condition>
    <greater-than>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <value>0.95</value>
    </greater-than>
   </condition>
@@ -456,7 +471,7 @@
   <object-name>NTire</object-name>
   <object-name>NoseGearStrut</object-name>
   <object-name>NoseGearStrutLower</object-name>
-  <property>/gear/gear[0]/position-norm</property>
+  <property>gear/gear[0]/position-norm</property>
   <factor>-100</factor>
   <offset-deg>100</offset-deg>   
   <center>
@@ -811,7 +826,7 @@
  <animation>
   <type>rotate</type>
   <object-name>speedbrake-left</object-name>
-  <property>/fdm/jsbsim/fcs/horizontal-speedbrake-pos-norm</property>
+  <property>fdm/jsbsim/fcs/horizontal-speedbrake-pos-norm</property>
   <factor>55</factor>
   <center>
      <x-m>7.627</x-m>
@@ -827,7 +842,7 @@
  <animation>
   <type>rotate</type>
   <object-name>speedbrake-left</object-name>
-  <property>/engines/engine/nozzle-pos-norm</property>
+  <property>engines/engine/nozzle-pos-norm</property>
   <factor>6</factor>
   <center>
      <x-m>7.627</x-m>
@@ -845,7 +860,7 @@
  <animation>
   <type>rotate</type>
   <object-name>speedbrake-right</object-name>
-  <property>/fdm/jsbsim/fcs/horizontal-speedbrake-pos-norm</property>
+  <property>fdm/jsbsim/fcs/horizontal-speedbrake-pos-norm</property>
   <factor>55</factor>
   <center>
      <x-m>7.627</x-m>
@@ -861,7 +876,7 @@
  <animation>
   <type>rotate</type>
   <object-name>speedbrake-right</object-name>
-  <property>/engines/engine/nozzle-pos-norm</property>
+  <property>engines/engine/nozzle-pos-norm</property>
   <factor>6</factor>
   <center>
      <x-m>7.627</x-m>
@@ -879,7 +894,7 @@
  <animation>
   <type>rotate</type>
   <object-name>speedbrake-top</object-name>
-  <property>/fdm/jsbsim/fcs/vertical-speedbrake-pos-norm</property>
+  <property>fdm/jsbsim/fcs/vertical-speedbrake-pos-norm</property>
   <factor>55</factor>
   <center>
      <x-m>7.6307</x-m>
@@ -895,7 +910,7 @@
  <animation>
   <type>rotate</type>
   <object-name>speedbrake-top</object-name>
-  <property>/engines/engine/nozzle-pos-norm</property>
+  <property>engines/engine/nozzle-pos-norm</property>
   <factor>6</factor>
   <center>
      <x-m>7.6307</x-m>
@@ -913,7 +928,7 @@
  <animation>
   <type>rotate</type>
   <object-name>speedbrake-bottom</object-name>
-  <property>/fdm/jsbsim/fcs/vertical-speedbrake-pos-norm</property>
+  <property>fdm/jsbsim/fcs/vertical-speedbrake-pos-norm</property>
   <factor>55</factor>
   <center>
      <x-m>7.6307</x-m>
@@ -929,7 +944,7 @@
  <animation>
   <type>rotate</type>
   <object-name>speedbrake-bottom</object-name>
-  <property>/engines/engine/nozzle-pos-norm</property>
+  <property>engines/engine/nozzle-pos-norm</property>
   <factor>6</factor>
   <center>
      <x-m>7.6307</x-m>
@@ -947,7 +962,7 @@
  <animation>
   <type>rotate</type>
   <object-name>probe-door-fwd</object-name>
-  <property>/systems/refuel/probe/position-norm</property>
+  <property>systems/refuel/probe/position-norm</property>
   <interpolation>
     <entry><ind>0</ind><dep>0</dep></entry>
     <entry><ind>0.1</ind><dep>-80</dep></entry>
@@ -1018,46 +1033,29 @@
   </axis>
  </animation>
 
- <!-- Suppress Seat/Pilot Models in Cockpit View -->
- <!--
- <animation>
-  <type>select</type>
-  <object-name>Pilot</object-name>
-  <object-name>Headrest</object-name>
-  <condition>
-   <not>
-   <equals>
-    <property>/sim/current-view/view-number</property>
-    <value>0</value>
-   </equals>
-   </not>
-  </condition>
- </animation>
- -->
+<!-- fire -->
+	
+	<model>
+		<name>fire</name>
+		<path>Aircraft/F-105/Models/Effects/Engine/Fire.xml</path>
+		<condition>
+			<equals>
+				<property>sim/crashed</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>4.05</x-m>
+			<y-m>0.00</y-m>
+			<z-m>0.75</z-m>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>	
+ 
 
- <!-- Upper Rotating beacon flash -->
- <animation>
-  <type>material</type>
-  <object-name>beacon-upper</object-name>
-  <emission>
-    <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
-    <red>1</red>
-    <green>0</green>
-    <blue>0</blue>
-  </emission>
- </animation>
 
- <!-- Lower Rotating beacon flash -->
- <animation>
-  <type>material</type>
-  <object-name>beacon-lower</object-name>
-  <emission>
-    <factor-prop>sim/multiplay/generic/float[1]</factor-prop>
-    <red>1</red>
-    <green>0</green>
-    <blue>0</blue>
-  </emission>
- </animation>
 
  <!-- Canopy -->
  <animation>
@@ -1077,6 +1075,56 @@
    <z>0</z>
   </axis>
  </animation>
+ 
+ <!-- Sonic boom effect -->
+  <model>
+ <name>sonicboom</name>
+		<path>Aircraft/F-105/Models/Effects/shockwave/shockwave.xml</path>
+		<offsets>
+			<x-m>1</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model> 
+	
+<!-- vapor effets -->
+
+<model>
+		<path>Aircraft/F-105/Models/Effects/Vapour/Vapour.xml</path>
+		<offsets>
+			<x-m>-2.0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.2</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>	
+	
+	<model>
+		<path>Aircraft/F-105/Models/Effects/Vapour/Vapour2.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-2</y-m>
+			<z-m>0.2</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+
+<model>
+		<path>Aircraft/F-105/Models/Effects/Vapour/Vapour2.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>2</y-m>
+			<z-m>0.2</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>	
 
 </PropertyList>
  

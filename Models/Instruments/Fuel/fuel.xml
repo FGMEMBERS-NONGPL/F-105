@@ -21,7 +21,7 @@
   <animation>
   <type>rotate</type>
   <object-name>needle</object-name>
-  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <property>consumables/fuel/total-fuel-lbs</property>
   <factor>0.012857143</factor>
   <center>
    <x-m>0.02</x-m>

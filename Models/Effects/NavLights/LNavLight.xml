@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>LNavLight.ac</path>
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>Light</object-name>
+ </animation>
+
+ <animation>
+  <type>dist-scale</type>
+  <object-name>Light</object-name>
+  <interpolation>
+   <entry><ind>0</ind><dep>1.0</dep></entry>
+   <entry><ind>10000</ind><dep>20.0</dep></entry>
+  </interpolation>
+ </animation>
+
+</PropertyList>

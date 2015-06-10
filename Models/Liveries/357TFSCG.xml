@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+         <name type="string">USAF 357 TFS - Cherry Girl</name>
+     <texture-fuselage>Liveries/357TFSCG/fuselage2.png</texture-fuselage>
+     <texture-wing>Liveries/357TFSCG/wings.png</texture-wing>
+	 <texture-pylon>Liveries/357TFSCG/pylons.png</texture-pylon>
+	  <texture-vtail>Liveries/357TFSCG/vtail.png</texture-vtail>
+	 <texture-htail>Liveries/357TFSCG/htail.png</texture-htail>
+      <texture-pylon>Liveries/357TFSCG/pylons.png</texture-pylon>
+	   <texture-tanks>Liveries/357TFSCG/tanks.png</texture-tanks>
+    <texture-misc>Liveries/357TFSCG/misc.png</texture-misc>
+
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>
