@@ -9,6 +9,16 @@
 
   <channel name="Refuel">
 
+     <switch name="systems/refuel/door-commands">
+          <default value="0"/>
+          <test value="1">
+                systems/refuel/armed == 1
+          </test>
+          <output>systems/refuel/probe-cmd</output>
+          <output>systems/refuel/door-cmd</output>
+     </switch>
+
+
      <kinematic name="systems/refuel/probe-control">
        <input>systems/refuel/probe-cmd</input>
        <traverse>
@@ -45,8 +55,9 @@
                 systems/refuel/probe-pos-norm gt 0.99
                 systems/refuel/door-pos-norm gt 0.99
           </test>
-          <test  value="0">
-                systems/refuel/armed == 0
+          <test  logic="AND" value="1">
+                systems/refuel/armed == 1
+                systems/refuel/contact == 1
           </test>
           <output>propulsion/refuel</output>
      </switch>

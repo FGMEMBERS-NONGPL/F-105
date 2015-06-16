@@ -1,31 +1,3 @@
-FGUK's Republic F-105 Thunderchief
-----------------------------------
-
-http://fguk.eu/index.php/hangar/viewdownload/8-military-jets/503-republic-f-105-thunderchief
-
-![FGUK IMAGE](http://www.fguk.eu/images/jdownloads/screenshots/fgfs-screen-0284.png)
-
-This aircraft requires the Dave Pack, available <a href="http://fguk.eu/index.php/hangar/viewdownload/11-other-objects-and-vehicles/170-davepackupdate">HERE</a>
-
-Release Notes:
---------------
-
-V0.4
------
-
-* Both YASIM + JSBsim vesions available.
-* Both versions:-
-* Updated sound files.
-* Updated effects.
-* Advanced lighting kit fitted.
-* HD Pilot fitted.
-* Pilot cam + Over The Shoulder cam added.
-* Huge makeover of the cockpit.
-* Livery swapping enable with extra liveries included.
-
-
-***
-
 This F-105 model is released under the Creative Commons license:  CC-BY-NC-SA.  Do not make any money with this model without contacting the primary author, David Culp, at davidculp@cox.net .
 
 The license applies to the 3D model, the Flight Dynamics Model, and the associated nasal scripts.  Note that some of the instrument and effects models incorporated herein have been released by their authors with a GPL license, and they retain that license here.

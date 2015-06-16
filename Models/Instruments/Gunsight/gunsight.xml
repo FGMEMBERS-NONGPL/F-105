@@ -4,19 +4,7 @@
 
 <PropertyList>
 
-
-
  <path>gunsight.ac</path>
- 
- 
- <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>noshadow.glass</object-name>
-	
-	
-</animation>
 
  <animation>
   <type>material</type>

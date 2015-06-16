@@ -2,7 +2,7 @@
 <!--
 ************************************************************************
 Republic F-105 config file
-David Culp,  davidculp@cox.net
+David Culp,  daveculp@cox.net
 License: Creative Commons CC-BY-NC-SA
 ************************************************************************
 -->
@@ -13,30 +13,13 @@ License: Creative Commons CC-BY-NC-SA
 
   <description>Republic F-105D Thunderchief</description>
   <author>David Culp, Julien Pierru, "pebble garden"</author>
-  <status>beta v0.4</status>
+  <status>beta</status>
   <flight-model>jsb</flight-model>
   <aero>F-105D</aero>
   
   <startup>
    <splash-texture>Aircraft/F-105/F-105-splash.png</splash-texture>
   </startup>
-  
-   <systems>
-	<electrical>
-        <path>Aircraft/Generic/generic-electrical.xml</path>
-      </electrical>
-      <autopilot>
-        <path>Aircraft/F-100D/Systems/autopilot5.xml</path>
-      </autopilot>
-      <autopilot>
-        <path>Aircraft/F-105/Systems/engine-nozzle.xml</path>
-      </autopilot>
-       <refuel>
-         <type>probe</type>
-         <serviceable type="bool">true</serviceable>
-       </refuel>
-	   
-	    </systems>
 
   <gui>
    <style>
@@ -63,12 +46,6 @@ License: Creative Commons CC-BY-NC-SA
     <serviceable type="bool">true</serviceable>
     <path>Aircraft/F-105/submodels.xml</path>
   </submodels>
-  
-    <ai>
-      <scenario>
-	   <path>Aircraft/F-105/AI/EGOD_arrestor_cables.xml</path>
-	  </scenario>
-    </ai>
 
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
@@ -86,38 +63,6 @@ License: Creative Commons CC-BY-NC-SA
     <z-offset-m archive="y">-4.25</z-offset-m><!-- aft/fore -->
    </config>
   </view>
-  
-     <view n="100">
-	   <name>Pilot cam</name>
-        <internal archive="y">false</internal>
-        <config>
-		 <from-model type="bool">true</from-model>
-      <from-model-idx type="int">0</from-model-idx>
-      <x-offset-m archive="y">0.0</x-offset-m><!-- right/left -->
-    <y-offset-m archive="y">1.2</y-offset-m><!-- up/down -->
-    <z-offset-m archive="y">-4.9</z-offset-m><!-- aft/fore -->
-          <pitch-offset-deg>0</pitch-offset-deg>
-		  <heading-offset-deg>180</heading-offset-deg>
-          <default-field-of-view-deg>95</default-field-of-view-deg>
-        </config>
-      </view>
-
-
-		<view n="101">
-			<name>Over the shoulder</name>
-			<internal archive="y">false</internal>
-			<config>
-				<from-model type="bool">true</from-model>
-				<from-model-idx type="int">0</from-model-idx>
-				<x-offset-m archive="y">0.29</x-offset-m>
-				<y-offset-m archive="y">1.2</y-offset-m>   <!-- 0.51-->
-                <z-offset-m archive="y">-3.9</z-offset-m>   <!-- 2.62-->
-				<pitch-offset-deg>-3</pitch-offset-deg>
-				<heading-offset-deg>10</heading-offset-deg>
-				<default-field-of-view-deg>65</default-field-of-view-deg>
-			</config>
-		</view>
-
 
 
   <model>
@@ -222,56 +167,25 @@ License: Creative Commons CC-BY-NC-SA
     </redout>
   </rendering>
 
- <mp-systems>
-<radar-enabled type="bool">true</radar-enabled>
-<ecm-rwr-enabled type="bool">true</ecm-rwr-enabled>
-<combat-enabled type="bool">true</combat-enabled>
-</mp-systems>	
-	
-
   <multiplay>
-     <generic n="0">
-	
-	
-      <!-- Nav lights on -->
-      <int n="0" alias="/controls/lighting/nav-lights-switch" />
-      <!-- Beacon on -->
-      <int n="1" alias="/controls/lighting/beacon-switch" />
-      
-      <!-- int[2] reserved for radar -->
-      <int n="2" type="int">1</int>    <!-- force radar standby transmission over MP -->
-      <!-- Landing lights on -->
-      <int n="3" alias="/controls/lighting/landing-lights-switch" />
-	  
-	    <int n="5" alias="/engines/engine[0]/state" />
-	 
-	  <int n="7" alias="/sim/crashed" />
-      
-       
-	<int n="9" type="int">  0 </int>  <!-- RESERVED FOR DUAL CONTROL (Boolean Light Switch)-->
-       
-	 <float n="8" alias="/engines/engine[0]/augmentation" /> <!-- Reheat Left Engine -->
-	 
-	<float n="15" alias="/velocities/mach" /> <!-- Mach for Multiplayer Sound -->
-	 <float n="16" alias="/engines/engine[0]/thrust-lbs" /> <!-- Thrust for Multiplayer Sound -->
-	
-	
-      <string n="0" type="string"></string>    <!-- bs_TDM1_mpp -->
-				<string n="1" type="string"></string>    <!-- pilot's instruments -->
-      </generic>
+    <generic>
+     <int n="0" type="int">0</int>
+     <int n="1" type="int">0</int>
+     <int n="2" type="int">0</int>
+     <int n="3" type="int">0</int>
+     <int n="4" type="int">0</int>
+     <int n="5" type="int">0</int>
+     <int n="6" type="int">0</int>
+     <int n="7" type="int">0</int>
+     <int n="8" type="int">0</int>
+     <int n="9" type="int">0</int>
+     <int n="10" type="int">0</int>
+     <int n="11" type="int">0</int>
+     <int n="12" type="int">0</int>
+    </generic>
   </multiplay>
-  
-  
-   <menubar include="Dialogs/menu.xml"/>
 
  </sim>
- 
-  
- <environment>
-    <turbulence>
-      <use-cloud-turbulence>true</use-cloud-turbulence>
-    </turbulence>
-  </environment>
 
  <controls>
   <flight>
@@ -289,8 +203,8 @@ License: Creative Commons CC-BY-NC-SA
    <master-arm type="bool">false</master-arm>
   </armament>
   <gear>
-      <brake-parking type="double">1.0</brake-parking>
-    </gear>
+    <brake-parking type="double">1.0</brake-parking>
+  </gear>
  </controls>
 
  <engines>
@@ -367,6 +281,15 @@ License: Creative Commons CC-BY-NC-SA
       <property>fdm/jsbsim/systems/chute/deploy</property>
       <value type="int">1</value>
      </binding>
+    </key>
+
+    <key n="102">
+      <name>f</name>
+      <desc>Toggle refueling system.</desc>
+      <binding>
+       <command>property-toggle</command>
+       <property>fdm/jsbsim/systems/refuel/armed</property>
+      </binding>
     </key>
 
     <key n="106">
@@ -524,25 +447,7 @@ License: Creative Commons CC-BY-NC-SA
    <value type="int">1</value>
   </binding>
  </key>
-<key n="83">
-    <name>S</name>
-    <desc>Start smoke</desc>
-    <binding>
-      <command>property-assign</command>
-      <property>sim/multiplay/generic/int[6]</property>
-      <value>true</value>
-    </binding>
-  </key>
 
-  <key n="117">
-    <name>u</name>
-    <desc>Stop smoke</desc>
-    <binding>
-      <command>property-assign</command>
-      <property>sim/multiplay/generic/int[6]</property>
-      <value>false</value>
-    </binding>
-  </key>
 
  </keyboard>
 </input>
@@ -551,18 +456,9 @@ License: Creative Commons CC-BY-NC-SA
  <fdm>
    <jsbsim>
      <systems>
-       <hook>
-         <tailhook-cmd-norm type="double">0</tailhook-cmd-norm> 
-       </hook>
-       <refuel>
-         <armed type="double">0</armed>
-       </refuel>
        <dump>
          <armed type="double">0</armed>
        </dump>
-       <NWS>
-         <engaged type="double">0</engaged>
-       </NWS>
        <canopy>
          <command type="double">0</command>
          <position type="double">0</position>
@@ -570,9 +466,6 @@ License: Creative Commons CC-BY-NC-SA
        <radar>
          <range type="int">40</range>
        </radar>
-       <Water_Injection>
-         <armed type="double">1</armed>
-       </Water_Injection> 
        <armament>
          <station1>
              <selected type="int">0</selected>
@@ -613,86 +506,36 @@ License: Creative Commons CC-BY-NC-SA
  </fdm>
 
 <instrumentation>
- <marker-beacon>
-            <volume type="double" archive="y">0.0</volume>
-        </marker-beacon>
-		<radar>
-			<range type="int" archive="y">20</range>
-			<range-factor type="double" archive="n">0.001888</range-factor>
-			<minimized type="bool" archive="y">false</minimized>
-			<selected type="int">3</selected>
-			<enabled type="bool">true</enabled>
-			<az-field type="double">120</az-field>
-			<range type="double">150</range>
-			<range-selected type="double">50</range-selected>
-			<radar2-range type="double">150</radar2-range>
-			<display-rdr type="bool">true</display-rdr>
-			<radar-standby type="int">3</radar-standby>
-			<mode>
-				<rws type="bool">true</rws>
-				<tws-auto type="bool">false</tws-auto>
-			</mode>
-		 </radar>
-        <rdmi-mode type="int">0</rdmi-mode> <!-- 0=TAC, 1=VOR, 2=ADF -->
-		<radar2>
-			<sweep-width-m type="double">0.0844</sweep-width-m>
-			<range-width-m type="double">0.0846</range-width-m>
-			<radius-ppi-display-m type="double">0.0846</radius-ppi-display-m>
-			<hud-eye-dist-m type="double">0.766</hud-eye-dist-m>
-			<hud-radius-m type="double">0.071</hud-radius-m>
-			<hud-vertical-offset-m type="double">-0.025</hud-vertical-offset-m>
-		</radar2>
-		<rwr>
-			<display-lighting-intens type="double">0.4</display-lighting-intens>
-			<symbology-lighting-intens type="double">1</symbology-lighting-intens>
-		</rwr>
-  
- </instrumentation>
-
+  <transponder>
+    <serviceable>true</serviceable>
+    <id-code>2000</id-code>
+    <mode-switch>4</mode-switch>
+  </transponder>
+  <marker-beacon>
+    <volume type="double" archive="y">0.0</volume>
+  </marker-beacon>
+  <radar>
+    <range type="int" archive="y">120</range>
+    <range-factor type="double" archive="n">0.000444</range-factor>
+    <minimized type="bool" archive="y">false</minimized>
+    <selected type="int">2</selected>
+  </radar>
+  <rdmi-mode type="int">0</rdmi-mode> <!-- 0=TAC, 1=VOR, 2=ADF -->
+</instrumentation>
 
  <systems>
    <refuel>
      <contact type="bool">false</contact>
+     <type>probe</type>
+     <type>boom</type>
    </refuel>
  </systems>
- 
+
  <nasal>
- 
- <F-105>
-	  
-	  <file>Aircraft/F-105/Nasal/liveries.nas</file>
-	  <file>Aircraft/F-105/Nasal/doors.nas</file>
-	</F-105>
-	
-	<lights>
-      <file>Aircraft/F-105/Nasal/Lights.nas</file>
-    </lights>
-    
-    <guns>
-      <file>Aircraft/F-105/Nasal/weapons.nas</file>
-      <file>Aircraft/F-105/Nasal/revi.nas</file>
-    </guns>
-	
-	
-	
-	 <rwr>
-            <file>Aircraft/Instruments-3d/rwr/rwr.nas</file>
-        </rwr> 
-        <radardist>
-            <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
-        </radardist>
-        <radar>
-            <file>Aircraft/F-105/Nasal/radar.nas</file>
-        </radar>
-        <radar2>
-            <file>Aircraft/Instruments-3d/radar2/radar2.nas</file>
-        </radar2>
-	
-	<radardist>
-<file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
-</radardist>
-	
-  </nasal>
+   <aar>
+     <file>Aircraft/DavePack/Nasal/aar_jsbsim.nas</file>
+   </aar>
+ </nasal>
 
 </PropertyList>
 

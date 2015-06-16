@@ -76,15 +76,15 @@
      <y>   0.00 </y>
      <z>   0.00 </z>
    </location>
-   <pointmass name="station1">
-     <weight>0.0</weight>
+   <pointmass name="station1 - unused">
+     <weight>0</weight>
      <location>
        <x> 490.00 </x>
        <y>-150.00 </y>
        <z> -10.00 </z>
      </location> 
    </pointmass>
-   <pointmass name="station2">
+   <pointmass name="station2 - empty tank">
      <weight>180.0</weight>
      <location>
        <x> 470.00 </x>
@@ -92,7 +92,7 @@
        <z> -10.00 </z>
      </location> 
    </pointmass>
-   <pointmass name="station3-centerline">
+   <pointmass name="station3-centerline - bombs">
      <weight>5000.0</weight>
      <location>
        <x> 464.00 </x>
@@ -100,7 +100,7 @@
        <z>   0.00 </z>
      </location> 
    </pointmass>
-   <pointmass name="station4">
+   <pointmass name="station4 - empty tank">
      <weight>180.0</weight>
      <location>
        <x> 470.00 </x>
@@ -108,7 +108,7 @@
        <z> -10.00 </z>
      </location> 
    </pointmass>
-   <pointmass name="station5">
+   <pointmass name="station5 - unused">
      <weight>0.0</weight>
      <location>
        <x> 490.00 </x>
@@ -130,8 +130,8 @@
    <dynamic_friction> 0.50 </dynamic_friction>
    <rolling_friction> 0.026 </rolling_friction>
    <spring_coeff unit="LBS/FT">     13000.00 </spring_coeff>
-   <damping_coeff unit="LBS/FT/SEC"> 6000.00 </damping_coeff>
-   <max_steer unit="DEG"> 75.00 </max_steer>
+   <damping_coeff unit="LBS/FT/SEC"> 8000.00 </damping_coeff>
+   <max_steer unit="DEG"> 60.00 </max_steer>
    <brake_group>NONE</brake_group>
    <retractable>1</retractable>
  </contact>
@@ -309,6 +309,7 @@
  <system file="water_injection"/>
  <system file="particles"/>
  <system file="canopy"/>
+ <system file="ab_workaround"/>
 
  <flight_control name="FCS: F-105D">
  </flight_control>
@@ -321,7 +322,7 @@
                   <table>
                       <independentVar>aero/h_b-mac-ft</independentVar>
                       <tableData>
-                          0.0000	0.0480
+                          0.0000	0.4800
                           0.1000	0.5150
                           0.1500	0.6290
                           0.2000	0.7090
@@ -432,9 +433,9 @@
             <tableData>
              -1.57    1.500
              -0.28    0.2
-             -0.26    0.025
-              0.00    0.020
-              0.26    0.025
+             -0.24    0.025
+              0.00    0.019
+              0.24    0.025
               0.28    0.2
               1.57    1.500
             </tableData>

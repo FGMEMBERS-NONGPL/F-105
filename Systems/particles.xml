@@ -11,7 +11,7 @@
      <switch name="contrail test">
           <default value="0"/>
           <test value="1">
-                /ai/submodels/contrails == 1
+             position/h-sl-ft gt 30000
           </test>
           <output>/sim/multiplay/generic/int[5]</output>
      </switch>
